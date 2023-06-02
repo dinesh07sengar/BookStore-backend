@@ -3,6 +3,8 @@ const { connect } = require('./config/db')
 const {Bookmodel}= require("./modals/books.modal")
 
 const cors = require('cors')
+const { route } = require('./routes/userRoute')
+const { oauth } = require('./routes/goauth')
 
 require('dotenv').config()
 
@@ -25,6 +27,8 @@ app.get("/books",async(req,res)=>{
     }
 
 })
+app.use("/user",route)
+app.use("/check",oauth)
 
 app.listen(process.env.PORT, async () => {
     try {

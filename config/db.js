@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const connect=async()=>{
     try {
-        await mongoose.connect("mongodb+srv://dinesh:sengar@cluster0.bsxdwit.mongodb.net/Bookups")
+        await mongoose.connect("mongodb+srv://dinesh:sengar@cluster0.bsxdwit.mongodb.net/Bookstore")
         console.log("connected to server")
         
     } catch (error) {
